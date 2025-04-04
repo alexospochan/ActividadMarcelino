@@ -1,0 +1,112 @@
+.character-detail-container {
+    background-color: #1a1a2e;
+    color: #e0e0e0;
+    padding: 40px;
+    max-width: 700px;
+    margin: 50px auto;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 0 25px rgba(0, 245, 212, 0.8);
+    border: 2px solid #00f5d4;
+    animation: fadeIn 0.8s ease-out; /* Animación de aparición cuando aparece un personaje */
+}
+
+/* Efecto de "aparecer" */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9); 
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);  
+    }
+}
+
+.character-detail-container img {
+    border-radius: 50%;
+    margin-top: 15px;
+    width: 220px;
+    height: 220px;
+    border: 4px solid #00f5d4;
+    transition: transform 0.4s ease, box-shadow 0.4s ease; 
+}
+
+/* Efecto de zoom y brillo en la imagen para que tenga estulo*/
+.character-detail-container img:hover {
+    transform: scale(1.1); /* Agranda la imagen */
+    box-shadow: 0 0 40px rgba(0, 245, 212, 1); 
+}
+
+.character-detail-container p {
+    margin: 10px 0;
+    font-size: 18px;
+    transition: transform 0.3s ease; /* Animación suave */
+}
+
+
+.character-detail-container p:hover {
+    transform: scale(1.05);
+    color: #00f5d4;
+}
+
+/* Lista de información */
+.character-detail-container ul {
+    list-style: none;
+    padding: 0;
+}
+
+.character-detail-container ul li {
+    background-color: #00f5d4;
+    color: #1a1a2e;
+    padding: 8px;
+    margin: 5px 0;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+/* Efecto de "levantamiento" en cada elemento de la lista de algun personaje */
+.character-detail-container ul li:hover {
+    transform: translateY(-5px); 
+    background-color: #00bcd4;
+    color: #fff;
+}
+
+/* Botón de buscar otro personaje */
+.back-button {
+    background-color: #00bcd4;
+    color: #fff;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 20px;
+    font-weight: bold;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+/* Aqui puse el efecto de rebote en imagen */
+.back-button:hover {
+    background-color: #008c9e;
+    transform: scale(1.1); 
+}
+
+
+.loading, .error {
+    color: #ff5252;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
+    animation: pulse 1.5s infinite alternate; 
+}
+
+/* Efecto de parpadeo */
+@keyframes pulse {
+    from {
+        opacity: 0.6;
+    }
+    to {
+        opacity: 1;
+    }
+}
